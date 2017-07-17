@@ -70,8 +70,12 @@ describe "Simon says" do
       expect(first_word("Hello World")).to eq("Hello")
     end
 
-    it "tells us the first word of 'oh dear' is 'oh'" do
-      expect(first_word("oh dear")).to eq("oh")
+    it "tells us the first word of 'oh dear john' is 'oh'" do
+      expect(first_word("oh dear john")).to eq("oh")
+    end
+
+    it "tells us the first 2 words of 'oh dear john' are 'oh dear'" do
+      expect(first_word("oh dear john", 2)).to eq("oh dear")
     end
   end
 
